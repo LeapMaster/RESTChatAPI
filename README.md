@@ -2,35 +2,35 @@
 
 Basic chat API to push an retrieve messages.
 
-##Tables
+## Tables
 
-###Messages
+### Messages
 ID - int(20) AUTO PRIMARY KEY
 message - varchar(200)
 timestamp - TIMESTAMP
 userID - int(20) FOREIGN KEY (Users)
 
-###Users
+### Users
 userID - int(20) AUTO PRIMARY KEY
 username - varchar(20)
 
-##First Checkpoint: 
+## First Checkpoint: 
 
 * GET message - Return list of last 20 messages, sorted by most recent first.
 Returns JSON array of message objects.
 
-##Second Checkpoint
+## Second Checkpoint
 
 * PUT message - Add a new message to the table.
 Returns confirmation code.
 
-##Third Checkpoint
+## Third Checkpoint
 
 * GET user - Return user info by user id.
 Returns user object.
 
 * PUT user - Add new user 
 
-##Fourth Checkpoint
+## Fourth Checkpoint
 
 * Not sure, we'll think of something.
