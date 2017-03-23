@@ -2,6 +2,7 @@ package com.sudowrestlers.chatapi;
 
 import com.sudowrestlers.chatapi.entity.Message;
 import com.sudowrestlers.chatapi.persistence.MessageDAO;
+import org.json.JSONArray;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -27,10 +28,12 @@ public class RecentMessages {
         MessageDAO dao = new MessageDAO();
         List<Message> messageArrayList = dao.getAllMessages();
         String output = "";
-        for (int index = 0; index < messageArrayList.size(); index++) {
-            Message currentMessage = messageArrayList.get(index);
-            output += currentMessage.toString() + "\n";
-        }
+//        for (int index = 0; index < messageArrayList.size(); index++) {
+//            Message currentMessage = messageArrayList.get(index);
+//            output += currentMessage.toString() + "\n";
+//        }
+        JSONArray jsonArrayList = new JSONArray(messageArrayList);
+        output = jsonArrayList.toString();
 
         if (!(messageArrayList.size() > 0)) {
             output = "Where are my messages\nI was told there would be messages";
