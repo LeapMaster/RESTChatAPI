@@ -21,7 +21,7 @@ Returns JSON array of message objects.
 
 ## Second Checkpoint
 
-* PUT message - Add a new message to the table.
+* POST message - Add a new message to the table.
 Returns confirmation code.
 
 ## Third Checkpoint
