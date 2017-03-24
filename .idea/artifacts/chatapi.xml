@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="chatapi">
+    <output-path>$PROJECT_DIR$/out/artifacts/chatapi</output-path>
+    <root id="archive" name="chatapi.war">
+      <element id="file-copy" path="$PROJECT_DIR$/chatapi/target/chatapi.war" />
+    </root>
+  </artifact>
+</component>

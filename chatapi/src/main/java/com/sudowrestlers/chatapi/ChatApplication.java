@@ -16,6 +16,7 @@ public class ChatApplication extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(RecentMessages.class );
+        h.add(OnlineUser.class);
         return h;
     }
 }
