@@ -1,6 +1,10 @@
 # RESTChatAPI
 
-Basic chat API to push an retrieve messages.
+## Problem Statement
+We need a basic but configurable chat API to push and retrieve messages.
+
+## Solution
+Make the thing! We'll use IntelliJ with Jersey to create a basic REST service that implements message insert/retrieval, as well as accommodating app-side user authentication and attaching users to each message.
 
 ## Tables
 
@@ -33,4 +37,8 @@ Returns user object.
 
 ## Fourth Checkpoint
 
-* Not sure, we'll think of something.
+* Modify messages to associate with a User. Add functionality to retrieve user data if sent proper username and password.
+
+## Fifth Checkpoint
+
+* Any additional stretch goals
