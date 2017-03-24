@@ -3,6 +3,7 @@ package com.sudowrestlers.chatapi.persistence;
 import com.sudowrestlers.chatapi.entity.Message;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,32 @@ public class MessageDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Message message = (Message) session.get(Message.class, id);
         return message;
+    }
+
+    /** Create a single message with given message body
+     *
+     * @param message message object's body
+     * @return Message id
+     */
+    public long createMessage(String message) {
+        Message newMessage = new Message();
+        newMessage.setMessage(message);
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = null;
+        Long newID = null;
+        try {
+            transaction = session.beginTransaction();
+            newID = (Long)session.save(newMessage);
+        } catch(RuntimeException e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            session.flush();
+            session.close();
+        }
+        return newID;
     }
 
 }
