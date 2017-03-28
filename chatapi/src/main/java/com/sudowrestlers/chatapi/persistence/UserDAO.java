@@ -19,7 +19,7 @@ public class UserDAO {
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<User>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(User.class).list();
+        users = session.createCriteria(User.class).list();
         return users;
     }
 
@@ -36,19 +36,19 @@ public class UserDAO {
 
     /** Create a single message with given message body
      *
-     * @param user object's body
+     * @param username user's name
      * @return user id
      */
-    public long createUser(String user) {
+    public long createUser(String username) {
         User newUser = new User();
-        newUser.setUser(user);
+        newUser.setUsername(username);
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
         Long newID = null;
         try {
             transaction = session.beginTransaction();
-            newID = (Long)session.save(newMessage);
+            newID = (Long)session.save(newUser);
         } catch(RuntimeException e) {
             if (transaction != null) {
                 transaction.rollback();

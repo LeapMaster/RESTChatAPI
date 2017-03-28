@@ -1,6 +1,9 @@
+/home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/persistence/UserDAO.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/persistence/SessionFactoryProvider.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/entity/Message.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/AddMessage.java
+/home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/OnlineUser.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/RecentMessages.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/ChatApplication.java
+/home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/entity/User.java
 /home/student/RESTChatAPI/chatapi/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java
