@@ -17,7 +17,7 @@ public class Message {
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name="ID")
-    private Integer ID;
+    private int ID;
 
     @Column(name="message")
     private String message;
@@ -26,9 +26,9 @@ public class Message {
     private Timestamp timestamp;
 
     @Column(name="userID", nullable=true)
-    private Integer userID;
+    private int userID;
 
-    public Integer getID() {
+    public int getID() {
         return ID;
     }
 
@@ -52,7 +52,7 @@ public class Message {
         this.timestamp = timestamp;
     }
 
-    public Integer getUserID() {
+    public int getUserID() {
         return userID;
     }
 

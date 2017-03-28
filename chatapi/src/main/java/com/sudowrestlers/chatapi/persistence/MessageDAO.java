@@ -39,20 +39,21 @@ public class MessageDAO {
      * @param message message object's body
      * @return Message id
      */
-    public long createMessage(String message) {
+    public int createMessage(String message) {
         Message newMessage = new Message();
         newMessage.setMessage(message);
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
-        Long newID = null;
+        int newID = null;
         try {
             transaction = session.beginTransaction();
-            newID = (Long)session.save(newMessage);
+            newID = session.save(newMessage);
         } catch(RuntimeException e) {
             if (transaction != null) {
                 transaction.rollback();
             }
+            newID = -1;
         } finally {
             session.flush();
             session.close();

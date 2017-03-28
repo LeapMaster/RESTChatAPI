@@ -4,10 +4,7 @@ import com.sudowrestlers.chatapi.entity.Message;
 import com.sudowrestlers.chatapi.persistence.MessageDAO;
 
 import javax.transaction.Transactional;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 /**
@@ -21,14 +18,14 @@ public class AddMessage {
     @Produces("text/plain")
     @Transactional
     public Response createPodcastFromApplicationFormURLencoded(
-            @FormParam("message") String message) {
+            @QueryParam("message") String message) {
 
         MessageDAO dao = new MessageDAO();
 
 
         Long newMessageIDLong = dao.createMessage(message); //= DAO Insert Message
         int newMessageID;
-        if (newMessageIDLong == null) {
+        if (newMessageIDLong == -1) {
             return Response
                     .status(Response.Status.BAD_REQUEST)// 400
                     .entity("Message was not inserted. ")
