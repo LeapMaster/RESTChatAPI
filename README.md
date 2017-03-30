@@ -32,6 +32,7 @@ Returns confirmation code.
 
 * GET message - Return list of all 50 messages
 * update PUT to trim oldest messages if 50+ exist
+* add userID parameter to PUT message insert, and GET to get all messages by userID
 
 ## Fourth Checkpoint
 
