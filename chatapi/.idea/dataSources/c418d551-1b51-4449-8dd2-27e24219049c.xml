@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="chat@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="chat">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="SAMPLE"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="ThaoFamilyDB"/>
+    <table id="10" parent="2" name="messages"/>
+    <table id="11" parent="2" name="users"/>
+    <column id="12" parent="10" name="ID">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="13" parent="10" name="message">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="14" parent="10" name="userID">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="15" parent="10" name="timestamp">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="16" parent="10" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="11" name="ID">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="11" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="19" parent="11" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
