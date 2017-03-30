@@ -45,10 +45,10 @@ public class MessageDAO {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
-        int newID = null;
+        int newID = 0;
         try {
             transaction = session.beginTransaction();
-            newID = session.save(newMessage);
+            newID = (int)session.save(newMessage);
         } catch(RuntimeException e) {
             if (transaction != null) {
                 transaction.rollback();
