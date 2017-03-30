@@ -45,6 +45,7 @@ public class MessageDAO {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
+
         Integer newID;
         try {
             transaction = session.beginTransaction();
