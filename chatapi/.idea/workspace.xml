@@ -84,8 +84,8 @@
       <file leaf-file-name="MessageDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="206">
+              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -755,12 +755,12 @@
       <workItem from="1490729156770" duration="56000" />
       <workItem from="1490833036730" duration="104000" />
       <workItem from="1490833186985" duration="1609000" />
-      <workItem from="1490895813667" duration="910000" />
+      <workItem from="1490895813667" duration="1035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18698000" />
+    <option name="totallyTimeSpent" value="18823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="103" width="1843" height="940" extended-state="0" />
@@ -1281,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="206">
+          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
           <folding />
         </state>
       </provider>
