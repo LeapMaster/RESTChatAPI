@@ -23,16 +23,14 @@ public class AddMessage {
         MessageDAO dao = new MessageDAO();
 
 
-        Long newMessageIDLong = dao.createMessage(message); //= DAO Insert Message
-        int newMessageID;
-        if (newMessageIDLong == -1) {
+        int newMessageID = dao.createMessage(message); //= DAO Insert Message
+        if (newMessageID == -1) {
             return Response
                     .status(Response.Status.BAD_REQUEST)// 400
                     .entity("Message was not inserted. ")
                     .header("Location",
                             "#").build();
         } else {
-            newMessageID = newMessageIDLong.intValue();
             return Response
                     .status(Response.Status.CREATED)// 201
                     .entity("A new was created with id "

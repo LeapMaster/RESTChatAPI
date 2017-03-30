@@ -26,7 +26,7 @@ public class Message {
     private Timestamp timestamp;
 
     @Column(name="userID", nullable=true)
-    private int userID;
+    private Integer userID;
 
     public int getID() {
         return ID;
@@ -52,11 +52,11 @@ public class Message {
         this.timestamp = timestamp;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 
