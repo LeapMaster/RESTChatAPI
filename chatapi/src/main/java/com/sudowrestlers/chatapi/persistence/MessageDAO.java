@@ -4,6 +4,7 @@ import com.sudowrestlers.chatapi.entity.Message;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class MessageDAO {
     public List<Message> getAllMessages() {
         List<Message> messages = new ArrayList<Message>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(Message.class).setMaxResults(20).list();
+        messages = session.createCriteria(Message.class).setMaxResults(20).addOrder(Order.desc("id")).list();
         return messages;
     }
 

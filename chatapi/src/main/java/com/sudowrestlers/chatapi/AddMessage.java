@@ -33,7 +33,7 @@ public class AddMessage {
         } else {
             return Response
                     .status(Response.Status.CREATED)// 201
-                    .entity("A new was created with id "
+                    .entity("A new message was created with id "
                             + newMessageID)
                     .header("Location",
                             "(URI of message)"
