@@ -30,15 +30,9 @@ Returns confirmation code.
 
 ## Third Checkpoint
 
-* GET user - Return user info by user id.
-Returns user object.
-
-* PUT user - Add new user 
+* GET message - Return list of all 50 messages
+* update PUT to trim oldest messages if 50+ exist
 
 ## Fourth Checkpoint
 
-* Modify messages to associate with a User. Add functionality to retrieve user data if sent proper username and password.
-
-## Fifth Checkpoint
-
-* Any additional stretch goals
+* GET - most recent message, listens and sends only on new message insert
