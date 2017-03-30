@@ -1,5 +1,0 @@
-com/sudowrestlers/chatapi/ChatApplication.class
-com/sudowrestlers/chatapi/RecentMessages.class
-com/sudowrestlers/chatapi/persistence/SessionFactoryProvider.class
-com/sudowrestlers/chatapi/entity/Message.class
-com/sudowrestlers/chatapi/persistence/MessageDAO.class
