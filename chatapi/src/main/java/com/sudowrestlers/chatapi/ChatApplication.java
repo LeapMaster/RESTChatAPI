@@ -18,6 +18,8 @@ public class ChatApplication extends Application {
         h.add(RecentMessages.class );
         h.add(AddMessage.class );
         h.add(OnlineUser.class);
+        h.add(AllMessages.class);
+        h.add(MessagesByUser.class);
         return h;
     }
 }

@@ -39,16 +39,16 @@ public class UserDAO {
      * @param username user's name
      * @return user id
      */
-    public long createUser(String username) {
+    public Integer createUser(String username) {
         User newUser = new User();
         newUser.setUsername(username);
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
-        Long newID = null;
+        Integer newID = null;
         try {
             transaction = session.beginTransaction();
-            newID = (Long)session.save(newUser);
+            newID = (Integer)session.save(newUser);
         } catch(RuntimeException e) {
             if (transaction != null) {
                 transaction.rollback();

@@ -5,6 +5,8 @@ import com.sudowrestlers.chatapi.entity.Message;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,15 +61,62 @@ public class MessageDAO {
             transaction = session.beginTransaction();
             newID = (Integer)session.save(newMessage);
         } catch(RuntimeException e) {
+            // Check if null to prevent null-pointer exceptions on rollback
             if (transaction != null) {
                 transaction.rollback();
             }
             newID = -1;
         } finally {
+            //Make sure to commit any changes, then close the session
+            transaction.commit();
             session.flush();
             session.close();
+            trimMessages();
         }
         return newID;
+    }
+
+    /** Trim old messages to fit the limit
+     */
+    public static void trimMessages() {
+        // Constant, can easily move to resources folder if needbe
+        int MAX_MESSAGES_COUNT = 50;
+
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Long messageCountLong = (Long) session.createCriteria(Message.class).setProjection(Projections.rowCount()).uniqueResult();
+        int messageCount = messageCountLong.intValue();
+        if (messageCount > MAX_MESSAGES_COUNT) {
+            // Calculate the difference between the correct and current amount of messages
+            int difference = messageCount - MAX_MESSAGES_COUNT;
+            List<Message> messages = new ArrayList<Message>();
+            // Order by ascending to make sure we get the oldest messages, only select as many messages as we're over
+            messages = session.createCriteria(Message.class).setMaxResults(difference).addOrder(Order.asc("id")).list();
+            Transaction transaction = null;
+            try {
+                transaction = session.beginTransaction();
+                for (Message message : messages) {
+                    session.delete(message);
+                }
+            }  catch(RuntimeException e) {
+                // Check if null to prevent null-pointer exceptions on rollback
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+            } finally {
+                //Make sure to commit any changes, then close the session
+                transaction.commit();
+                session.flush();
+                session.close();
+            }
+        }
+    }
+
+    public List<Message> getMessagesByUser(int userID) {
+        List<Message> messages = new ArrayList<Message>();
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        messages = session.createCriteria(Message.class).add(Restrictions.eq("userID", userID)).addOrder(Order.desc("ID")).list();
+        return messages;
     }
 
 }

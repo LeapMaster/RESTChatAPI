@@ -18,14 +18,13 @@ public class User {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name="userId")
+    @Column(name="ID")
     private Integer userId;
 
     @Column(name="username")
     private String username;
 
-    @Column(name="password")
-    private String password;
+
 
     public Integer getUserId() {
         return userId;
@@ -43,13 +42,7 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 
 
@@ -58,7 +51,6 @@ public class User {
         return "User{" +
                 "userId=" + userId +
                 "username=" + username +
-                "password=" + password +
                 "}";
     }
 
