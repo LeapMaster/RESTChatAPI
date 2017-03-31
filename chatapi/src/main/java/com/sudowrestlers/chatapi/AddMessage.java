@@ -18,12 +18,13 @@ public class AddMessage {
     @Produces("text/plain")
     @Transactional
     public Response createPodcastFromApplicationFormURLencoded(
-            @QueryParam("message") String message) {
+            @QueryParam("message") String message,
+            @QueryParam("userID") int userID) {
 
         MessageDAO dao = new MessageDAO();
 
 
-        int newMessageID = dao.createMessage(message); //= DAO Insert Message
+        int newMessageID = dao.createMessage(message, userID); //= DAO Insert Message
         if (newMessageID == -1) {
             return Response
                     .status(Response.Status.BAD_REQUEST)// 400

@@ -49,9 +49,10 @@ public class MessageDAO {
      * @param message message object's body
      * @return Message id
      */
-    public int createMessage(String message) {
+    public int createMessage(String message, int userID) {
         Message newMessage = new Message();
         newMessage.setMessage(message);
+        newMessage.setUserID(userID);
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;

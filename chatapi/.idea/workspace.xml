@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59ba7400-5a86-40cf-82c4-37dbe8eac64e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/AllMessages.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/MessagesByUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/AllMessages.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/MessagesByUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/MessagesByUser.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/chatapi/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/ChatApplication.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/ChatApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/RecentMessages.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/RecentMessages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/entity/User.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/entity/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/AddMessage.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/AddMessage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/persistence/MessageDAO.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/persistence/MessageDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/persistence/UserDAO.class" afterPath="$PROJECT_DIR$/target/chatapi-1.0-SNAPSHOT/WEB-INF/classes/com/sudowrestlers/chatapi/persistence/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/ChatApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/ChatApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/RecentMessages.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/RecentMessages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/entity/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/AddMessage.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/AddMessage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/persistence/MessageDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/persistence/MessageDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/persistence/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/sudowrestlers/chatapi/persistence/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AllMessages.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AllMessages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/ChatApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/ChatApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/RecentMessages.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/RecentMessages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/entity/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/UserDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,13 +85,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="-341">
+              <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
               <folding>
-                <element signature="e#3216#3225#0" expanded="true" />
+                <element signature="e#3266#3275#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddMessage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddMessage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="315">
+              <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -169,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/ChatApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/MessagesByUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java" />
       </list>
     </option>
   </component>
@@ -707,12 +690,12 @@
       <updated>1490913674035</updated>
       <workItem from="1490913675397" duration="66000" />
       <workItem from="1490916021832" duration="2862000" />
-      <workItem from="1490921662345" duration="1678000" />
+      <workItem from="1490921662345" duration="2038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4606000" />
+    <option name="totallyTimeSpent" value="4966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -731,7 +714,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -739,7 +722,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2526142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -765,13 +748,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java</url>
-          <line>91</line>
+          <line>92</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java</url>
-          <line>101</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -838,7 +821,7 @@
         <state relative-caret-position="645">
           <caret line="51" column="43" lean-forward="false" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding>
-            <element signature="e#3216#3225#0" expanded="true" />
+            <element signature="e#3266#3275#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,21 +899,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="-341">
+          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+          <folding>
+            <element signature="e#3266#3275#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/persistence/MessageDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudowrestlers/chatapi/AddMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#3216#3225#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
