@@ -2,26 +2,26 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
+chatapi/.idea/workspace.xml
+chatapi/.idea/tasks.xml
+chatapi/.idea/dictionaries
+chatapi/.idea/vcs.xml
+chatapi/.idea/jsLibraryMappings.xml
 
 # Sensitive or high-churn files:
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dataSources.local.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
+chatapi/.idea/dataSources.ids
+chatapi/.idea/dataSources.xml
+chatapi/.idea/dataSources.local.xml
+chatapi/.idea/sqlDataSources.xml
+chatapi/.idea/dynamic.xml
+chatapi/.idea/uiDesigner.xml
 
 # Gradle:
-.idea/gradle.xml
-.idea/libraries
+chatapi/.idea/gradle.xml
+chatapi/.idea/libraries
 
 # Mongo Explorer plugin:
-.idea/mongoSettings.xml
+chatapi/.idea/mongoSettings.xml
 
 ## File-based project format:
 *.iws
