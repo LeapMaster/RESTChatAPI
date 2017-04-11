@@ -1,5 +1,6 @@
 package com.sudowrestlers.chatapi;
 
+import com.google.gson.Gson;
 import com.sudowrestlers.chatapi.entity.Message;
 import com.sudowrestlers.chatapi.persistence.MessageDAO;
 import org.json.JSONArray;
@@ -30,8 +31,9 @@ public class RecentMessages {
 //            Message currentMessage = messageArrayList.get(index);
 //            output += currentMessage.toString() + "\n";
 //        }
-        JSONArray jsonArrayList = new JSONArray(messageArrayList);
-        output = jsonArrayList.toString();
+        Gson gson = new Gson();
+
+        output = gson.toJson(messageArrayList).toString();
 
         if (!(messageArrayList.size() > 0)) {
             output = "Where are my messages\nI was told there would be messages";

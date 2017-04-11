@@ -63,10 +63,10 @@ public class Message {
     @Override
     public String toString() {
         return "Message{" +
-                "ID=" + ID +
-                "message=" + message +
-                "timestamp=" + timestamp +
-                "userID=" + userID +
+                "ID:" + ID +
+                ",message:" + message +
+                ",timestamp:" + timestamp +
+                ",userID:" + userID +
                 "}";
     }
 
