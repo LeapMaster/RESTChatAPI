@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="chatapi:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="chatapi-1.0-SNAPSHOT.war">
+    <root id="archive" name="chatapi.war">
       <element id="artifact" artifact-name="chatapi:war exploded" />
     </root>
   </artifact>
