@@ -8,13 +8,23 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * Created by student on 3/6/17.
  */
 public class MessageDAO {
+
+    Properties properties;
+
+    public MessageDAO() {
+        loadProperties("/config/properties.properties");
+    }
+
+
     /** Return a list of all messages
      *
      * @return All messages
@@ -29,7 +39,9 @@ public class MessageDAO {
     public List<Message> getRecentMessages() {
         List<Message> messages = new ArrayList<Message>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(Message.class).setMaxResults(20).addOrder(Order.asc("id")).list();
+        int count = Integer.parseInt(properties.getProperty("messages.recent"));
+        System.out.println(count);
+        messages = session.createCriteria(Message.class).setMaxResults(count).addOrder(Order.asc("id")).list();
         return messages;
     }
 
@@ -115,9 +127,9 @@ public class MessageDAO {
 
     /** Trim old messages to fit the limit
      */
-    public static void trimMessages() {
+    public void trimMessages() {
         // Constant, can easily move to resources folder if needbe
-        int MAX_MESSAGES_COUNT = 50;
+        int MAX_MESSAGES_COUNT = Integer.parseInt(properties.getProperty("messages.trim"));
 
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -154,6 +166,27 @@ public class MessageDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         messages = session.createCriteria(Message.class).add(Restrictions.eq("userID", userID)).addOrder(Order.desc("ID")).list();
         return messages;
+    }
+
+    /**
+     * Load the properties file so its value can be retrieved
+     * @param propertiesFilePath the file path to the properties file
+     */
+    public void loadProperties(String propertiesFilePath) {
+        properties = new Properties();
+        try {
+            properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
+        } catch(IOException ioException) {
+            ioException.printStackTrace();
+        } catch(Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public static void main (String[] args) {
+        MessageDAO dao = new MessageDAO();
+        dao.trimMessages();
+
     }
 
 }
