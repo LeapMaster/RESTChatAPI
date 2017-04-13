@@ -1,5 +1,7 @@
 package com.sudowrestlers.chatapi;
 
+import com.sudowrestlers.chatapi.ServerSocketWIP.OnlineUser;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
