@@ -9,6 +9,9 @@ Make the thing! We'll use IntelliJ with Jersey to create a basic REST service th
 ## Usage Guide
 Below are the 5 available endpoints for the API; use these to provide persistence and back-end functionality for a chat program.
 
+### Endpoint URL host
+* [Tack the following onto this URL to make API calls.](http://52.14.153.185:8080/chatapi/)
+
 ### /recent
 * allows GET request
 * No parameters
@@ -34,6 +37,9 @@ Below are the 5 available endpoints for the API; use these to provide persistenc
 * allows GET request
 * One parameter: @QueryParam String _userID_; ID of user to select by
 * Returns JSON of GSON-serialized messages associated with selected userID, newest first, no explicit limit
+
+### Example Webapp
+* [Example of a Webapp leveraging three of the five API calls.](http://52.14.153.185:8080/chatproject/)
 
 ## Technologies
 
