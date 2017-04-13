@@ -10,6 +10,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <finalName>chatapi</finalName>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -66,7 +67,5 @@
     </dependency>
 
   </dependencies>
-  <build>
-    <finalName>chatapi</finalName>
-  </build>
+
 </project>
