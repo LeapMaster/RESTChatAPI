@@ -1,11 +1,8 @@
 package com.sudowrestlers.chatapi.entity;
 
-import javax.persistence.Entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.sql.Timestamp;
 
 /**
  * Created by student on 3/23/17.
@@ -23,7 +20,7 @@ public class User {
 
     @Column(name="username")
     private String username;
-
+    private String user;
 
 
     public Integer getUserId() {
@@ -42,7 +39,13 @@ public class User {
         this.username = username;
     }
 
+    public User(){
 
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
 
 
 
@@ -53,5 +56,7 @@ public class User {
                 "username=" + username +
                 "}";
     }
+
+
 
 }

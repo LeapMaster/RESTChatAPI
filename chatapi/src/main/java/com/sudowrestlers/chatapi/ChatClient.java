@@ -1,189 +1,67 @@
+package com.sudowrestlers.chatapi;
 
+import com.sudowrestlers.chatapi.ClientBuilder;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.InvocationCallback;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Link;
+import javax.ws.rs.core.Response;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
 
-public class ChatClient extends JFrame
+//import javax.ws.rs.client.ClientBuilder;
+
+/**
+ * @author Student
+ */
+public class ChatClient
 {
-    private JButton connectButton;
-    private JButton sendButton;
-    private JTextField nameTextField;
-    private JTextField chatTextField;
-    private JTextArea jta;
-    private BufferedReader in;
-    private PrintWriter out;
-    private boolean connected=false;
-
-    public ChatClient()
+    public static void main(String[] args) throws Exception
     {
-        super("ChatClient");
+        String name = args[0];
 
-        ActionHandler ah=new ActionHandler();
-        KeyHandler kh=new KeyHandler();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
 
-        JPanel mainPanel=new JPanel();
-        add(mainPanel,BorderLayout.CENTER);
+        final Client client = new ClientBuilder()
+                .connectionPoolSize(3)
+                .build();
+        WebTarget target = client.target("http://localhost:8080/services/chat");
 
-        JPanel topPanel=new JPanel();
-        topPanel.setLayout(new GridLayout(2,1));
-        add(topPanel,BorderLayout.NORTH);
-
-        JPanel panel1=new JPanel();
-        ((FlowLayout)panel1.getLayout()).setAlignment(FlowLayout.LEFT);
-        topPanel.add(panel1);
-
-        panel1.add(new JLabel("Name:"));
-        nameTextField=new JTextField(20);
-        nameTextField.addKeyListener(kh);
-        panel1.add(nameTextField);
-
-        connectButton=new JButton("Connect");
-        connectButton.addActionListener(ah);
-        connectButton.setEnabled(false);
-        panel1.add(connectButton);
-
-        JPanel panel2=new JPanel();
-        ((FlowLayout)panel2.getLayout()).setAlignment(FlowLayout.LEFT);
-        topPanel.add(panel2);
-
-        panel2.add(new JLabel("Message:"));
-        chatTextField=new JTextField(20);
-        chatTextField.addKeyListener(kh);
-        panel2.add(chatTextField);
-
-        sendButton=new JButton("Send");
-        sendButton.setEnabled(false);
-        sendButton.addActionListener(ah);
-        panel2.add(sendButton);
-
-        jta=new JTextArea();
-        jta.setEditable(false);
-        JScrollPane jsp=new JScrollPane(jta);
-        jsp.setVerticalScrollBarPolicy(
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jsp.setPreferredSize(new Dimension(500,500));
-        mainPanel.add(jsp);
-
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.pack();
-        this.setVisible(true);
-    }
-
-    private void connect()
-    {
-        try
+        target.request().async().get(new InvocationCallback<Response>()
         {
-            Socket s=new Socket("localhost",5000);
-            in=new BufferedReader(new InputStreamReader(s.getInputStream()));
-            out=new PrintWriter(s.getOutputStream(),true);
-            out.println(nameTextField.getText());
-            new Worker().start();
-            sendButton.setEnabled(true);
-            connected=true;
-            connectButton.setText("Disconnect");
-            chatTextField.requestFocus();
-        }
-        catch(IOException ioe)
-        {
-            System.out.println(ioe);
-        }
-    }
+            @Override
+            public void completed(Response response)
+            {
+                Link next = response.getLink("next");
+                String message = response.readEntity(String.class);
+                System.out.println();
+                System.out.print(message);// + "\r");
+                System.out.println();
+                System.out.print("> ");
+                client.target(next).request().async().get(this);
+            }
 
-    public static void main(String[] args)
-    {
-        new ChatClient();
-    }
+            @Override
+            public void failed(Throwable throwable)
+            {
+                System.err.println("FAILURE!");
+            }
+        });
 
-    private class KeyHandler extends KeyAdapter
-    {
-        public void keyTyped(KeyEvent e)
-        {
-            if(e.getSource()==nameTextField)
-            {
-                connectButton.setEnabled(true);
-                if(e.getKeyChar()==KeyEvent.VK_ENTER)
-                {
-                    connect();
-                }
-            }
-            else if(e.getSource()==chatTextField)
-            {
-                if(e.getKeyChar()==KeyEvent.VK_ENTER)
-                {
-                    if(out==null) return;
-                    out.println(chatTextField.getText());
-                    chatTextField.setText("");
-                    jta.setCaretPosition(jta.getText().length()-1);
-                }
-            }
-        }
-    }
 
-    private class ActionHandler implements ActionListener
-    {
-        public void actionPerformed(ActionEvent e)
+        while (true)
         {
-            if(e.getSource()==connectButton)
-            {
-                if(!connected)
-                {
-                    connect();
-                }
-                else
-                {
-                    try
-                    {
-                        out.close();
-                        in.close();
-                        sendButton.setEnabled(false);
-                        connectButton.setText("Connect");
-                        connected=false;
-                    }
-                    catch(IOException ioe)
-                    {
-                        System.out.println(ioe);
-                    }
-                }
-            }
-            else if(e.getSource()==sendButton)
-            {
-                if(out==null) return;
-                out.println(chatTextField.getText());
-                chatTextField.setText("");
-                chatTextField.requestFocus();
-                jta.setCaretPosition(jta.getText().length()-1);
-            }
+            System.out.print("> ");
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String message = br.readLine();
+            target.request().post(Entity.text(name + ": " + message));
         }
-    }
 
-    private class Worker extends Thread
-    {
-        public void run()
-        {
-            try
-            {
-                String line;
-                while((line=in.readLine())!=null)
-                {
-                    jta.append(line+"\n");
-                }
-                connected=false;
-                connectButton.setEnabled(false);
-                sendButton.setEnabled(false);
-            }
-            catch(IOException ioe)
-            {
-                System.out.println(ioe);
-            }
-        }
+
     }
 }
