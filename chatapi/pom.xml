@@ -64,6 +64,9 @@
       <artifactId>gsonvalue</artifactId>
       <version>0.4</version>
     </dependency>
-  </dependencies>
 
+  </dependencies>
+  <build>
+    <finalName>chatapi</finalName>
+  </build>
 </project>
