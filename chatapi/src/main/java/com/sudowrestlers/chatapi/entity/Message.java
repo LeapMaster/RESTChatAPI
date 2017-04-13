@@ -1,10 +1,8 @@
 package com.sudowrestlers.chatapi.entity;
 
-import javax.persistence.Entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
@@ -17,16 +15,17 @@ public class Message {
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name="ID")
-    private int ID;
+    public int ID;
 
     @Column(name="message")
-    private String message;
+    public String message;
 
     @Column(name="timestamp")
     private Timestamp timestamp;
 
     @Column(name="userID", nullable=true)
     private Integer userID;
+    public Message next;
 
     public int getID() {
         return ID;
