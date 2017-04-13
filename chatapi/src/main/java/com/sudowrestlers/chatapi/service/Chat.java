@@ -1,4 +1,4 @@
-//package com.sudowrestlers.chatapi.service;
+package com.sudowrestlers.chatapi.service;
 //
 //import com.sudowrestlers.chatapi.entity.Message;
 //
@@ -18,8 +18,8 @@
 // * @author Student
 // */
 //@Path("chat")
-//public class Chat
-//{
+public class Chat
+{
 //
 //
 //    protected Message first;
@@ -121,4 +121,4 @@
 //        Response response = Response.ok(message.message, MediaType.TEXT_PLAIN_TYPE).links(next).build();
 //        async.resume(response);
 //    }
-//}
+}

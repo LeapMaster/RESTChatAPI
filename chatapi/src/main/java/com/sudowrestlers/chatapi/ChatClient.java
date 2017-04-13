@@ -1,4 +1,4 @@
-//package com.sudowrestlers.chatapi;
+package com.sudowrestlers.chatapi;
 //
 //import com.sudowrestlers.chatapi.ClientBuilder;
 //
@@ -16,8 +16,8 @@
 ///**
 // * @author Student
 // */
-//public class ChatClient
-//{
+public class ChatClient
+{
 //    public static void main(String[] args) throws Exception
 //    {
 //        String name = args[0];
@@ -64,4 +64,4 @@
 //
 //
 //    }
-//}
+}

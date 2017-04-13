@@ -1,6 +1,8 @@
 com/sudowrestlers/chatapi/ChatApplication.class
+com/sudowrestlers/chatapi/ChatClient.class
 com/sudowrestlers/chatapi/persistence/SessionFactoryProvider.class
 com/sudowrestlers/chatapi/OnlineUser.class
+com/sudowrestlers/chatapi/service/Chat.class
 com/sudowrestlers/chatapi/entity/User.class
 com/sudowrestlers/chatapi/entity/Message.class
 com/sudowrestlers/chatapi/persistence/MessageDAO.class
