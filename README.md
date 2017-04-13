@@ -1,10 +1,39 @@
 # RESTChatAPI
 
 ## Problem Statement
-We need a basic but configurable chat API to push and retrieve messages inputted in live time by the user.
+We need a basic but configurable chat API to push and retrieve messages input in real time by the user.
 
 ## Solution
 Make the thing! We'll use IntelliJ with Jersey to create a basic REST service that implements message insert/retrieval, as well as accommodating app-side user authentication and attaching users to each message.
+
+## Usage Guide
+Below are the 5 available endpoints for the API; use these to provide persistence and back-end functionality for a chat program.
+
+### /recent
+* allows GET request
+* No parameters
+* Returns JSON of GSON-serialized messages, newest first, limited to 20 (default, configurable in API's properties)
+
+### /all
+* allows GET request
+* No parameters
+* Returns JSON of GSON-serialized messages, newest first, limited to 50 (default, configurable in API's properties)
+
+### /add
+* allows POST request
+* One parameter: String _jsonData_ with two key-value pairs. _message_ holds the text body for the message, _userID_ holds the ID for the associated user.
+    * For example: _"{\\"message\\": \\"This is a message!\\", \\"userID\\": \\"3\\"}"_
+* Returns a Response confirming whether insert was successful or not
+
+### /delete
+* allows GET request (as to allow ease of access through DHTML)
+* One parameter: @QueryParam String _messageID_; holds the ID for the message to be deleted.
+* Returns a Response confirming whether delete was successful or not
+
+### /messagesbyuser
+* allows GET request
+* One parameter: @QueryParam String _userID_; ID of user to select by
+* Returns JSON of GSON-serialized messages associated with selected userID, newest first, no explicit limit
 
 ## Technologies
 
@@ -65,5 +94,18 @@ Returns confirmation code.
 
 ## Fourth Checkpoint
 
-* GET - most recent message, listens and sends only on new message insert
+* ~GET - most recent message, listens and sends only on new message insert~
+
+## Fifth Checkpoint
+* POST - Delete message by ID* 
+* Finish any other API changes
+
+## Sixth Checkpoint
+* Make sure all API calls work using Soap UI
+* Write Java code to call the endpoints
+
+## Seventh Checkpoint
+* Build a webapp that uses the Java code to leverage the API by calling its endpoints
+
+
 
