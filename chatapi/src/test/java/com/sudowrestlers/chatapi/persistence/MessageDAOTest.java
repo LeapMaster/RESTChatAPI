@@ -44,12 +44,12 @@ public class MessageDAOTest {
         );
         assertEquals(message.getMessage(), "Sixth test mess- no wait, definitely fifth.");
     }
-
-    @Test
-    public void createMessage() {
-        int messageID = dao.createMessage("hello this is a message", 1);
-
-    }
+//Currently creates a new message each time we run!
+//    @Test
+//    public void createMessage() {
+//        int messageID = dao.createMessage("hello this is a message", 1);
+//
+//    }
 
     @Test
     public void getMessagesByUser() {
