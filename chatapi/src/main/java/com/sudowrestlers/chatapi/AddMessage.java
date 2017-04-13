@@ -15,10 +15,15 @@ import javax.ws.rs.core.Response;
 @Path("/add")
 public class AddMessage {
 
+    /**
+     * create a new message with text and associated user ID
+     * @param jsonData
+     * @return response detailed success or failure
+     */
     @POST
     @Consumes("application/json")
     @Transactional
-    public Response createPodcastFromApplicationFormURLencoded(String jsonData) {
+    public Response AddMessage(String jsonData) {
         JSONObject jsonObject = null;
         String messageValue = "";
         int userID = 0;

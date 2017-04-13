@@ -14,7 +14,7 @@ public class DeleteMessage {
 
     @GET
     @Transactional
-    public Response createPodcastFromApplicationFormURLencoded(
+    public Response DeleteMessage(
             @QueryParam("messageID") String messageID) {
 
         MessageDAO dao = new MessageDAO();

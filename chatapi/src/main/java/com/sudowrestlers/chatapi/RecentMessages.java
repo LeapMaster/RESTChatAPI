@@ -28,10 +28,6 @@ public class RecentMessages {
         List<Message> messageArrayList = dao.getRecentMessages();
 
         String output = "";
-//        for (int index = 0; index < messageArrayList.size(); index++) {
-//            Message currentMessage = messageArrayList.get(index);
-//            output += currentMessage.toString() + "\n";
-//        }
         Gson gson = new Gson();
 
         output = new GsonBuilder().setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz")
