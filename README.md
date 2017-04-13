@@ -12,6 +12,9 @@ This single use api allows you to send messages and store them in a database. We
 API End Point: http://52.14.153.185:8080/chatapi/recent
 Basic Implementation of API: http://52.14.153.185:8080/chatproject/
 
+### chatApplication: 
+* Main Class, Creates HashSet of other classes to run and deploy them. URL below includes this class path.
+
 ### Endpoint URL host
 * [Tack the following onto this URL to make API calls.](http://52.14.153.185:8080/chatapi/)
 
