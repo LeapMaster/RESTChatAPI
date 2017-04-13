@@ -1,6 +1,5 @@
-package com.sudowrestlers.chatapi;
 
-import com.sudowrestlers.chatapi.ClientBuilder;
+package com.sudowrestlers.chatapi;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -16,6 +15,8 @@ import java.io.InputStreamReader;
 /**
  * @author Student
  */
+
+
 public class ChatClient
 {
     public static void main(String[] args) throws Exception
@@ -65,3 +66,5 @@ public class ChatClient
 
     }
 }
+
+*/

@@ -27,15 +27,25 @@ public class MessageDaoTest {
     @Test
     public void getRecentMessages() {
         List<Message> messages = dao.getRecentMessages();
-
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(Message.class).setMaxResults(20).addOrder(Order.desc("id")).list();
         assertNotNull(messages);
 
     }
 
     @Test
-    public List<Message> getAllMessages() {
+    public void getAllMessages() {
+        List<Message> messages = dao.getRecentMessages();
+        assertNotNull(messages);
+
+    }
+
+    @Test
+    public void getMessage() {
+        Message message = dao.getMessage(1);
+        assertEquals(message, "");
+    }
+
+    @Test
+    public void createMessage() {
 
     }
 

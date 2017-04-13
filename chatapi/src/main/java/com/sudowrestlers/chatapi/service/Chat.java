@@ -1,3 +1,5 @@
+/*
+
 package com.sudowrestlers.chatapi.service;
 
 import com.sudowrestlers.chatapi.entity.Message;
@@ -17,6 +19,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author Student
  */
+/*
 @Path("chat")
 public class Chat
 {
@@ -122,3 +125,5 @@ public class Chat
         async.resume(response);
     }
 }
+
+*/
