@@ -32,7 +32,7 @@ public class MessageDAO {
     public List<Message> getAllMessages() {
         List<Message> messages = new ArrayList<Message>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(Message.class).addOrder(Order.asc("id")).list();
+        messages = session.createCriteria(Message.class).addOrder(Order.desc("id")).list();
         return messages;
     }
 
@@ -41,7 +41,7 @@ public class MessageDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         int count = Integer.parseInt(properties.getProperty("messages.recent"));
         System.out.println(count);
-        messages = session.createCriteria(Message.class).setMaxResults(count).addOrder(Order.asc("id")).list();
+        messages = session.createCriteria(Message.class).setMaxResults(count).addOrder(Order.desc("id")).list();
         return messages;
     }
 
