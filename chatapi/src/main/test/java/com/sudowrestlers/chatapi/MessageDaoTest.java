@@ -46,7 +46,14 @@ public class MessageDaoTest {
 
     @Test
     public void createMessage() {
+        int messageID = dao.createMessage("hello this is a message", 1);
 
+    }
+
+    @Test
+    public void getMessagesByUser() {
+        List<Message> messagesByUser = dao.getMessagesByUser(1);
+        assertNotNull(messagesByUser);
     }
 
 
