@@ -1,5 +1,6 @@
 package com.sudowrestlers.chatapi;
 
+import com.google.gson.GsonBuilder;
 import com.sudowrestlers.chatapi.entity.Message;
 import com.sudowrestlers.chatapi.persistence.MessageDAO;
 import org.json.JSONArray;
@@ -29,8 +30,9 @@ public class MessagesByUser {
         List<Message> messageArrayList = dao.getMessagesByUser(userID);
 
         String output = "";
-        JSONArray jsonArrayList = new JSONArray(messageArrayList);
-        output = jsonArrayList.toString();
+        output = new GsonBuilder().setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz")
+                .create()
+                .toJson(messageArrayList);
 
         if (!(messageArrayList.size() > 0)) {
             output = "This user has written no messages.";
