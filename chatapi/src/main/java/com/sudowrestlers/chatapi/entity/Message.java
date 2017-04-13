@@ -25,7 +25,9 @@ public class Message {
 
     @Column(name="userID", nullable=true)
     private Integer userID;
-    public Message next;
+
+
+//    public Message next;
 
     public int getID() {
         return ID;

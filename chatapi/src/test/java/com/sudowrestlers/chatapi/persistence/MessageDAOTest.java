@@ -1,4 +1,4 @@
-package com.sudowrestlers.chatapi;
+package com.sudowrestlers.chatapi.persistence;
 
 import com.sudowrestlers.chatapi.persistence.MessageDAO;
 import com.sudowrestlers.chatapi.entity.Message;
@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 /**
  * Created by student on 4/12/17.
  */
-public class MessageDaoTest {
+public class MessageDAOTest {
     MessageDAO dao;
 
     @Before
@@ -34,10 +34,7 @@ public class MessageDaoTest {
 
     }
 
-    @Test
-    public List<Message> getAllMessages() {
 
-    }
 
 
 }
