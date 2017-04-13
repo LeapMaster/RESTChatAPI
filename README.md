@@ -7,7 +7,10 @@ We need a basic but configurable chat API to push and retrieve messages input in
 Make the thing! We'll use IntelliJ with Jersey to create a basic REST service that implements message insert/retrieval, as well as accommodating app-side user authentication and attaching users to each message.
 
 ## Usage Guide
-Below are the 5 available endpoints for the API; use these to provide persistence and back-end functionality for a chat program.
+This single use api allows you to send messages and store them in a database. We created this service to be implemented as an instant messenger. There is no server attached but this Chat Service updates and retrieves database records to allow users to view their messages. Requires a MySQL database for functionality: Message and User.
+
+API End Point: http://52.14.153.185:8080/chatapi/recent
+Basic Implementation of API: http://52.14.153.185:8080/chatproject/
 
 ### Endpoint URL host
 * [Tack the following onto this URL to make API calls.](http://52.14.153.185:8080/chatapi/)
@@ -41,45 +44,51 @@ Below are the 5 available endpoints for the API; use these to provide persistenc
 ### Example Webapp
 * [Example of a Webapp leveraging three of the five API calls.](http://52.14.153.185:8080/chatproject/)
 
+### Errors
+
+* 500 Error: You have reached this page in error or the server may be down.
+
+### Example Output
+
+* _host url_ + /chatapi/recent
+
+[{"ID":50,"message":"message body","timestamp":"Thu, 13 Apr 2017 20:44:22 UTC","userID":0},{"ID":49,"message":"so happy","timestamp":"Thu, 13 Apr 2017 20:44:04 UTC","userID":0},{"ID":48,"message":"abc","timestamp":"Thu, 13 Apr 2017 19:21:55 UTC","userID":0},{"ID":46,"message":"Wow look at that message","timestamp":"Thu, 13 Apr 2017 19:18:13 UTC","userID":0},{"ID":44,"message":"Testing","timestamp":"Thu, 13 Apr 2017 19:10:10 UTC","userID":0},{"ID":40,"message":"Potato Tomato","timestamp":"Thu, 13 Apr 2017 18:47:13 UTC","userID":0},{"ID":39,"message":"This is a message body.","timestamp":"Thu, 13 Apr 2017 18:46:37 UTC","userID":0},{"ID":38,"message":"abc","timestamp":"Thu, 13 Apr 2017 18:46:19 UTC","userID":0},{"ID":37,"message":"Message bodies can be 200 characters long by default.","timestamp":"Thu, 13 Apr 2017 18:46:13 UTC","userID":0},{"ID":33,"message":"Hello!","timestamp":"Thu, 13 Apr 2017 18:26:39 UTC","userID":0},{"ID":32,"message":"What a nice day!","timestamp":"Thu, 13 Apr 2017 18:26:34 UTC","userID":0},{"ID":31,"message":"Who wants lunch?","timestamp":"Thu, 13 Apr 2017 17:39:52 UTC","userID":0},{"ID":30,"message":"The sun is shining.","timestamp":"Thu, 13 Apr 2017 17:38:38 UTC","userID":0},{"ID":29,"message":"Donde esta la biblioteca?","timestamp":"Thu, 13 Apr 2017 17:34:52 UTC","userID":0},{"ID":17,"message":"Seventeenth. 99% of all asphalt is recycled and reused to make new roads.","timestamp":"Mon, 06 Mar 2017 17:37:49 UTC","userID":2},{"ID":15,"message":"Fifteenth message. Did you know that the classiication of oranges as a berry has been confusing and controversial?","timestamp":"Mon, 06 Mar 2017 17:36:05 UTC","userID":3},{"ID":14,"message":"Fourteenth message, we\u0027re getting there.","timestamp":"Mon, 06 Mar 2017 17:33:14 UTC","userID":2},{"ID":13,"message":"Thirteenth message. Spoooooky.","timestamp":"Mon, 06 Mar 2017 17:33:00 UTC","userID":1},{"ID":12,"message":"Twelfth message. Because twelvth would make too much sense.","timestamp":"Mon, 06 Mar 2017 17:32:03 UTC","userID":3},{"ID":11,"message":"Why do we need multiple compound vowels to make the same sound?","timestamp":"Mon, 06 Mar 2017 17:30:51 UTC","userID":2}]
+
 ## Technologies
 
- Database - MySql
-    Store tables for Users and Messages
- Api
-     /All
-     /Delete - removes message from DB/display
-     /Recent - shows all message "history" up to 50 messages
+ * Database - MySql
+      * Store tables for Users and Messages
      
- Logging
-        Log4J
+ * Logging
+      * Log4J
         
- Unit Testing
-        Junit
+ * Unit Testing
+      * Junit
         
- Database CRUD
-        Hibernate
+ * Database CRUD
+      * Hibernate
         
- Return formats
-        JSON
-        text
-        HTML
-        jQuery
+ * Return formats
+      * JSON
+      * text
+      * HTML
+      * jQuery
 
 
 ## Database:
-Chat
+* Chat
 
 ## Tables:
 
 ### Messages
-ID - int(20) AUTO PRIMARY KEY
-message - varchar(200)
-timestamp - TIMESTAMP
-userID - int(20) FOREIGN KEY (Users)
+* ID - int(20) AUTO PRIMARY KEY
+* message - varchar(200)
+* timestamp - TIMESTAMP
+* userID - int(20) FOREIGN KEY (Users)
 
 ### Users
-userID - int(20) AUTO PRIMARY KEY
-username - varchar(20)
+* userID - int(20) AUTO PRIMARY KEY
+* username - varchar(20)
 
 
 ## First Checkpoint: 
