@@ -77,6 +77,40 @@ public class MessageDAO {
         return newID;
     }
 
+    /** Create a single message with given message body
+     *
+     * @param messageID id of message to delete
+     * @return status number
+     */
+    public int deleteMessage(int messageID) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = null;
+        Message message = getMessage(messageID);
+        int status = 0;
+        if (message == null) {
+            status = -1;
+        }
+        try {
+            transaction = session.beginTransaction();
+            session.delete(message);
+        } catch(RuntimeException e) {
+            // Check if null to prevent null-pointer exceptions on rollback
+            if (transaction != null) {
+                transaction.rollback();
+            }
+
+        } finally {
+            //Make sure to commit any changes, then close the session
+            transaction.commit();
+            status = 1;
+            session.flush();
+            session.close();
+            trimMessages();
+
+        }
+        return status;
+    }
+
     /** Trim old messages to fit the limit
      */
     public static void trimMessages() {

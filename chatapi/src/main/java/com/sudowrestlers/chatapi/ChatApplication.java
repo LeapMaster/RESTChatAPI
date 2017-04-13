@@ -22,6 +22,7 @@ public class ChatApplication extends Application {
         h.add(OnlineUser.class);
         h.add(AllMessages.class);
         h.add(MessagesByUser.class);
+        h.add(DeleteMessage.class);
 
         return h;
     }
